@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Supermarket - Promotion</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo"><img src="images1/logo.jpg" alt="logo"></div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Promotions</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search" class="search-bar" placeholder="Search products...">
+      <button class="search-button">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-icon" id="favBtn">❤</button>
+      <div class="cart-icon">
+        <button class="header-icon" onclick="scrollToCart()">🛒</button>
+        <span id="cart-badge">0</span>
+      </div>
+      <a href="compte.html" class="header-icon account-link">👤</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Boisson.html">Boissons</a></li>
+      <li><a href="Fruit & légume.html">Fruit & légume</a></li>
+      <li><a href="Boulangerie.html">Boulangerie</a></li>
+      <li><a href="Produits laitiers.html">Produits laitiers</a></li>
+      <li><a href="Electromenager.html">Electromenager</a></li>
+      <li><a href="Cosmetique.html">Beauté</a></li>
+      <li><a href="Promotion.html" class="active">Promotion</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <div class="cart-box">
+      <h2>🛒 Mon Panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Articles: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">0.00</span> DH</p>
+      </div>
+      <button id="clear-cart" class="clear-cart-btn">Vider le panier</button>
+    </div>
+  </section>
+
+  <div class="promo-video">
+    <video class="promo-video-m" autoplay loop muted preload="auto">
+      <source src="video/1221.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <section class="products">
+    <h2>Promotions 1</h2>
+
+    <div class="product-card fade-in" data-name="Montre avec ecouteurs" data-price="265">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/montre avec ecouteure.jpg" alt="montre">
+      <h3>Montre avec ecouteurs</h3>
+      <p class="olde-price">454 DH</p>
+      <div class="price-card">
+        <span class="price">265 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Vr casque" data-price="200">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/vr.jpg" alt="vr">
+      <h3>Vr casque</h3>
+      <p class="olde-price">306 DH</p>
+      <div class="price-card">
+        <span class="price">200 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="4 Manchons de doigt" data-price="19">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/manchons de doigt.jpg" alt="manchons">
+      <h3>4 Manchons de doigt</h3>
+      <p class="olde-price">31 DH</p>
+      <div class="price-card">
+        <span class="price">19 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Clavier & souris gaming" data-price="275">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/souris clavier gaming.jpg" alt="sc">
+      <h3>Clavier & souris gaming</h3>
+      <p class="olde-price">454 DH</p>
+      <div class="price-card">
+        <span class="price">275 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Promotions 2</h2>
+
+    <div class="product-card fade-in" data-name="Jeux de Bébé" data-price="130">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/Aquarium colore push n spin.jpg" alt="jeux">
+      <h3>Jeux de Bébé</h3>
+      <p class="olde-price">170 DH</p>
+      <div class="price-card">
+        <span class="price">130 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="8 flèches excel mk3 - AUCHAN" data-price="70">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/8 flèches excel mk3 - AUCHAN.jpg" alt="jeux">
+      <h3>8 flèches excel mk3 - AUCHAN</h3>
+      <p class="olde-price">99 DH</p>
+      <div class="price-card">
+        <span class="price">70 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Coffret cadeau bébé" data-price="269">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/Coffret cadeau bébé.webp" alt="jeux">
+      <h3>Coffret cadeau bébé</h3>
+      <p class="olde-price">300 DH</p>
+      <div class="price-card">
+        <span class="price">269 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Assortiment perles bijoux" data-price="89.99">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/Assortiment perles bijoux.webp" alt="jeux">
+      <h3>Assortiment perles bijoux</h3>
+      <p class="olde-price">120 DH</p>
+      <div class="price-card">
+        <span class="price">89.99 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Mugs promo</h2>
+
+    <div class="product-card fade-in" data-name="Mug etoiles du maroc" data-price="14.99">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/Mug etoiles du maroc.webp" alt="cup">
+      <h3>Mug etoiles du maroc</h3>
+      <p class="olde-price">20 DH</p>
+      <div class="price-card">
+        <span class="price">14.99 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Mug fenetre zellige" data-price="14.99">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/Mug fenetre zellige.webp" alt="cup">
+      <h3>Mug fenetre zellige</h3>
+      <p class="olde-price">20 DH</p>
+      <div class="price-card">
+        <span class="price">14.99 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Mug passion foot morocco" data-price="14.99">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/Mug passion foot morocco.webp" alt="cup">
+      <h3>Mug passion foot morocco</h3>
+      <p class="olde-price">20 DH</p>
+      <div class="price-card">
+        <span class="price">14.99 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Mug ferveur rouge" data-price="14.99">
+      <span class="badge-promo">Promotion</span>
+      <img src="images1/Mug ferveur rouge.webp" alt="cup">
+      <h3>Mug ferveur rouge</h3>
+      <p class="olde-price">20 DH</p>
+      <div class="price-card">
+        <span class="price">14.99 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mini-Supermarket</h3>
+        <p>Les meilleurs produits aux meilleurs prix</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>liens importants</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Promotion.html">Promotion</a></li>
+          <li><a href="#">me contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>me contacter</h4>
+        <p>📍 Maroc</p>
+        <p>📞 +212 601615019</p>
+        <p>📧 mariembouden09@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mini-Supermarket - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

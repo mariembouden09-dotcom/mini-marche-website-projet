@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Supermarket - Boissons</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo"><img src="images1/logo.jpg" alt="logo"></div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Boissons fraîches</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search" class="search-bar" placeholder="Search products...">
+      <button class="search-button">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-icon" id="favBtn">❤</button>
+      <div class="cart-icon">
+        <button class="header-icon" onclick="scrollToCart()">🛒</button>
+        <span id="cart-badge">0</span>
+      </div>
+      <a href="compte.html" class="header-icon account-link">👤</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Boisson.html" class="active">Boissons</a></li>
+      <li><a href="Fruit & légume.html">Fruit & légume</a></li>
+      <li><a href="Boulangerie.html">Boulangerie</a></li>
+      <li><a href="Produits laitiers.html">Produits laitiers</a></li>
+      <li><a href="Electromenager.html">Electromenager</a></li>
+      <li><a href="Cosmetique.html">Cosmetique</a></li>
+      <li><a href="Promotion.html">Promotion</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <div class="cart-box">
+      <h2>🛒 Mon Panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Articles: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">0.00</span> DH</p>
+      </div>
+      <button id="clear-cart" class="clear-cart-btn">Vider le panier</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Boissons gazeuses</h2>
+
+    <div class="product-card fade-in" data-name="7up" data-price="6">
+      <img src="images1/7up.jpg" alt="7up">
+      <h3>7up</h3>
+      <div class="price-card">
+        <span class="price">6 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Coca-Cola" data-price="6">
+      <img src="images1/coca canette.jpg" alt="coca">
+      <h3>Coca-Cola</h3>
+      <div class="price-card">
+        <span class="price">6 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Fanta" data-price="6">
+      <img src="images1/fanta canete.jpg" alt="fanta">
+      <h3>Fanta</h3>
+      <div class="price-card">
+        <span class="price">6 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Pepsi" data-price="6">
+      <img src="images1/pepsi.jpg" alt="pepsi">
+      <h3>Pepsi</h3>
+      <div class="price-card">
+        <span class="price">6 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Energy drinks</h2>
+
+    <div class="product-card fade-in" data-name="Monster" data-price="20">
+      <img src="images1/monster.jpg" alt="monster">
+      <h3>Monster</h3>
+      <div class="price-card">
+        <span class="price">20 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="RedBull" data-price="20">
+      <img src="images1/redbull.jpg" alt="redbull">
+      <h3>RedBull</h3>
+      <div class="price-card">
+        <span class="price">20 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Speed" data-price="20">
+      <img src="images1/speed.jpg" alt="speed">
+      <h3>Speed</h3>
+      <div class="price-card">
+        <span class="price">20 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Hell" data-price="12">
+      <img src="images1/Hell Energy Drink.jpg" alt="hell">
+      <h3>Hell</h3>
+      <div class="price-card">
+        <span class="price">12 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Jus</h2>
+
+    <div class="product-card fade-in" data-name="Orange jus" data-price="7">
+      <img src="images1/orange-juce.jpg" alt="jus">
+      <h3>Orange jus</h3>
+      <div class="price-card">
+        <span class="price">7 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Mango jus" data-price="7">
+      <img src="images1/mango juce.jpg" alt="mangojus">
+      <h3>Mango jus</h3>
+      <div class="price-card">
+        <span class="price">7 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Apple jus" data-price="7">
+      <img src="images1/pomme juce.jpg" alt="pomme juce">
+      <h3>Apple jus</h3>
+      <div class="price-card">
+        <span class="price">7 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Watermelon-juce" data-price="7">
+      <img src="images1/watermelon-juce.jpg" alt="jus">
+      <h3>Watermelon-juce</h3>
+      <div class="price-card">
+        <span class="price">7 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mini-Supermarket</h3>
+        <p>Les meilleurs produits aux meilleurs prix</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>liens importants</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Promotion.html">Promotion</a></li>
+          <li><a href="#">me contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>me contacter</h4>
+        <p>📍 Maroc</p>
+        <p>📞 +212 601615019</p>
+        <p>📧 mariembouden09@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Mini-Supermarket - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

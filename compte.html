@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Compte - Mini-Supermarket</title>
+  <link rel="stylesheet" href="styl.css" />
+</head>
+<body>
+  <div class="account-bg-shape shape-1"></div>
+  <div class="account-bg-shape shape-2"></div>
+  <div class="account-bg-shape shape-3"></div>
+
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo">
+          <img src="images1/logo.jpg" alt="logo">
+        </div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Mon espace personnel</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="header-actions">
+      <a href="index.html" class="header-icon account-link">🏠</a>
+    </div>
+  </header>
+
+  <section class="account-page">
+    <div class="account-box animated-account-box">
+      <h2 class="account-title">👤 Mon Compte</h2>
+      <p id="welcomeMessage" class="account-text">Inscris-toi ou connecte-toi</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('registerTab', this)">Inscription</button>
+        <button class="tab-btn" onclick="showTab('loginTab', this)">Connexion</button>
+      </div>
+
+      <div id="registerTab" class="tab-content active-tab">
+        <div class="input-group">
+          <input type="text" id="registerName" placeholder="Nom complet">
+        </div>
+        <div class="input-group">
+          <input type="email" id="registerEmail" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <input type="password" id="registerPassword" placeholder="Mot de passe">
+        </div>
+        <button class="login-btn pulse-btn" onclick="registerUser()">S'inscrire</button>
+      </div>
+
+      <div id="loginTab" class="tab-content">
+        <div class="input-group">
+          <input type="email" id="loginEmail" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <input type="password" id="loginPassword" placeholder="Mot de passe">
+        </div>
+        <button class="login-btn pulse-btn" onclick="loginUser()">Se connecter</button>
+      </div>
+
+      <button class="logout-btn" onclick="logoutUser()">Se déconnecter</button>
+
+      <p id="accountStatus" class="account-status"></p>
+
+      <div class="account-links">
+        <a href="index.html">⬅ Retour à l'accueil</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

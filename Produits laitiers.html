@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Supermarket - Produits laitiers</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo"><img src="images1/logo.jpg" alt="logo"></div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Laitiers et fromages</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search" class="search-bar" placeholder="Search products...">
+      <button class="search-button">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-icon" id="favBtn">❤</button>
+      <div class="cart-icon">
+        <button class="header-icon" onclick="scrollToCart()">🛒</button>
+        <span id="cart-badge">0</span>
+      </div>
+      <a href="compte.html" class="header-icon account-link">👤</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Boisson.html">Boissons</a></li>
+      <li><a href="Fruit & légume.html">Fruit & légume</a></li>
+      <li><a href="Boulangerie.html">Boulangerie</a></li>
+      <li><a href="Produits laitiers.html" class="active">Produits laitiers</a></li>
+      <li><a href="Electromenager.html">Electromenager</a></li>
+      <li><a href="Cosmetique.html">Cosmetique</a></li>
+      <li><a href="Promotion.html">Promotion</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <div class="cart-box">
+      <h2>🛒 Mon Panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Articles: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">0.00</span> DH</p>
+      </div>
+      <button id="clear-cart" class="clear-cart-btn">Vider le panier</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Produits laitiers</h2>
+
+    <div class="product-card fade-in" data-name="Danone activia" data-price="3">
+      <img src="images1/danone activia.jpg" alt="danone">
+      <h3>Danone activia</h3>
+      <div class="price-card">
+        <span class="price">3 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Danone fraise" data-price="3">
+      <img src="images1/danone fraise.jpg" alt="danone">
+      <h3>Danone fraise</h3>
+      <div class="price-card">
+        <span class="price">3 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="lait" data-price="6">
+      <img src="images1/lait.jpg" alt="lait">
+      <h3>lait</h3>
+      <div class="price-card">
+        <span class="price">6 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Nido" data-price="132">
+      <img src="images1/nido promo.jpg" alt="nido">
+      <h3>Nido</h3>
+      <div class="price-card">
+        <span class="price">132 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Kiri" data-price="22">
+      <img src="images1/kiri.jpg" alt="kiri">
+      <h3>Kiri</h3>
+      <div class="price-card">
+        <span class="price">22 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Fromages</h2>
+
+    <div class="product-card fade-in" data-name="Beurre" data-price="70">
+      <img src="images1/beurre.jpg" alt="beurre">
+      <h3>Beurre</h3>
+      <div class="price-card">
+        <span class="price">70 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="LA HOLLANDAISE" data-price="31.90">
+      <img src="images1/hollandaise.webp" alt="frommage">
+      <h3>LA HOLLANDAISE</h3>
+      <div class="price-card">
+        <span class="price">31.90 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Autres produits</h2>
+
+    <div class="product-card fade-in" data-name="Fromage frais à tartiner Jben duo 2x190g - CHERGUI" data-price="29">
+      <img src="images1/CHERGUI fromage.jpg" alt="fromage">
+      <h3>Fromage frais à tartiner Jben duo 2x190g - CHERGUI</h3>
+      <div class="price-card">
+        <span class="price">29 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Fromage Edam boule environ 900g - KROON" data-price="120">
+      <img src="images1/Fromage Edam boule environ 900g - KROON.jpg" alt="fromage boule">
+      <h3>Fromage Edam boule environ 900g - KROON</h3>
+      <div class="price-card">
+        <span class="price">120 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Fromage cuisine bloc goût Edam 90g - LA VACHE QUI RIT" data-price="19.50">
+      <img src="images1/Fromage cuisine bloc goût Edam 90g - LA VACHE QUI RIT.jpg" alt="la VACHE qri">
+      <h3>Fromage cuisine bloc goût Edam 90g - LA VACHE QUI RIT</h3>
+      <div class="price-card">
+        <span class="price">19.50 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mini-Supermarket</h3>
+        <p>Meilleure produits avec Meilleure prix</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>lien important</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Promotion.html">Promotion</a></li>
+          <li><a href="#">me contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Me contacter</h4>
+        <p>📍 Maroc</p>
+        <p>📞 +212 601615019</p>
+        <p>📧 mariembouden09@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mini-Supermarket - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

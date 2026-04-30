@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Supermarket - Fruit & légume</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo"><img src="images1/logo.jpg" alt="logo"></div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Fruits et légumes</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search" class="search-bar" placeholder="Search products...">
+      <button class="search-button">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-icon" id="favBtn">❤</button>
+      <div class="cart-icon">
+        <button class="header-icon" onclick="scrollToCart()">🛒</button>
+        <span id="cart-badge">0</span>
+      </div>
+      <a href="compte.html" class="header-icon account-link">👤</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Boisson.html">Boissons</a></li>
+      <li><a href="Fruit & légume.html" class="active">Fruit & légume</a></li>
+      <li><a href="Boulangerie.html">Boulangerie</a></li>
+      <li><a href="Produits laitiers.html">Produits laitiers</a></li>
+      <li><a href="Electromenager.html">Electromenager</a></li>
+      <li><a href="Cosmetique.html">Cosmetique</a></li>
+      <li><a href="Promotion.html">Promotion</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <div class="cart-box">
+      <h2>🛒 Mon Panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Articles: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">0.00</span> DH</p>
+      </div>
+      <button id="clear-cart" class="clear-cart-btn">Vider le panier</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Fruits</h2>
+
+    <div class="product-card fade-in" data-name="Ananas 1KG" data-price="25">
+      <img src="images1/ananas.jpg" alt="ananas">
+      <h3>Ananas 1KG</h3>
+      <div class="price-card">
+        <span class="price">25 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Avocat 1KG" data-price="21">
+      <img src="images1/avocat.jpg" alt="avocat">
+      <h3>Avocat 1KG</h3>
+      <div class="price-card">
+        <span class="price">21 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Banane 1KG" data-price="13">
+      <img src="images1/banane.jpg" alt="banane">
+      <h3>Banane 1KG</h3>
+      <div class="price-card">
+        <span class="price">13 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Kiwi 1KG" data-price="23">
+      <img src="images1/kiwi.jpg" alt="kiwi">
+      <h3>Kiwi 1KG</h3>
+      <div class="price-card">
+        <span class="price">23 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Autres fruits</h2>
+
+    <div class="product-card fade-in" data-name="Orange 1KG" data-price="7">
+      <img src="images1/orange.jpg" alt="orange">
+      <h3>Orange 1KG</h3>
+      <div class="price-card">
+        <span class="price">7 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Mangue 1KG" data-price="30">
+      <img src="images1/mangue.jpg" alt="mangue">
+      <h3>Mangue 1KG</h3>
+      <div class="price-card">
+        <span class="price">30 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Poire 1KG" data-price="17">
+      <img src="images1/poire.jpg" alt="poire">
+      <h3>Poire 1KG</h3>
+      <div class="price-card">
+        <span class="price">17 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Raisins 1KG" data-price="16">
+      <img src="images1/raisins عنب.jpg" alt="raisins">
+      <h3>Raisins 1KG</h3>
+      <div class="price-card">
+        <span class="price">16 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Légumes</h2>
+
+    <div class="product-card fade-in" data-name="Aubergine 1KG" data-price="13.50">
+      <img src="images1/aubergine  باذنجان.jpg" alt="aubergine">
+      <h3>Aubergine 1KG</h3>
+      <div class="price-card">
+        <span class="price">13.50 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Carrote 1KG" data-price="8">
+      <img src="images1/carrote.jpg" alt="carrote">
+      <h3>Carrote 1KG</h3>
+      <div class="price-card">
+        <span class="price">8 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Chou-fleur 1KG" data-price="12">
+      <img src="images1/Chou-fleur.jpg" alt="Chou-fleur">
+      <h3>Chou-fleur 1KG</h3>
+      <div class="price-card">
+        <span class="price">12 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="citrouille 1KG" data-price="9">
+      <img src="images1/citrouille.jpg" alt="citrouille">
+      <h3>citrouille 1KG</h3>
+      <div class="price-card">
+        <span class="price">9 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Autres légumes</h2>
+
+    <div class="product-card fade-in" data-name="Onion 1KG" data-price="10">
+      <img src="images1/onion.jpg" alt="onion">
+      <h3>Onion 1KG</h3>
+      <div class="price-card">
+        <span class="price">10 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Poivre 1KG" data-price="16">
+      <img src="images1/poivre.jpg" alt="poivre">
+      <h3>Poivre 1KG</h3>
+      <div class="price-card">
+        <span class="price">16 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Pomme de terre 1KG" data-price="9">
+      <img src="images1/pomme de terre.jpg" alt="pomme de terre">
+      <h3>Pomme de terre 1KG</h3>
+      <div class="price-card">
+        <span class="price">9 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Tomate 1KG" data-price="7">
+      <img src="images1/tomate.jpg" alt="tomate">
+      <h3>Tomate 1KG</h3>
+      <div class="price-card">
+        <span class="price">7 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mini-Supermarket</h3>
+        <p>Les meilleurs produits aux meilleurs prix</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>liens importants</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Promotion.html">Promotion</a></li>
+          <li><a href="#">me contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Me contacter</h4>
+        <p>📍 Maroc</p>
+        <p>📞 +212 601615019</p>
+        <p>📧 mariembouden09@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mini-Supermarket - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

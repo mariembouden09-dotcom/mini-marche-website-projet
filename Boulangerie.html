@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Supermarket - Boulangerie</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo"><img src="images1/logo.jpg" alt="logo"></div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Pain, viennoiseries et pâtisserie</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search" class="search-bar" placeholder="Search products...">
+      <button class="search-button">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-icon" id="favBtn">❤</button>
+      <div class="cart-icon">
+        <button class="header-icon" onclick="scrollToCart()">🛒</button>
+        <span id="cart-badge">0</span>
+      </div>
+      <a href="compte.html" class="header-icon account-link">👤</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Boisson.html">Boissons</a></li>
+      <li><a href="Fruit & légume.html">Fruit & légume</a></li>
+      <li><a href="Boulangerie.html" class="active">Boulangerie</a></li>
+      <li><a href="Produits laitiers.html">Produits laitiers</a></li>
+      <li><a href="Electromenager.html">Electromenager</a></li>
+      <li><a href="Cosmetique.html">Cosmetique</a></li>
+      <li><a href="Promotion.html">Promotion</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <div class="cart-box">
+      <h2>🛒 Mon Panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Articles: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">0.00</span> DH</p>
+      </div>
+      <button id="clear-cart" class="clear-cart-btn">Vider le panier</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Pains</h2>
+
+    <div class="product-card fade-in" data-name="Baguette" data-price="1.5">
+      <img src="images1/baguette.jpg" alt="baguette">
+      <h3>Baguette</h3>
+      <div class="price-card">
+        <span class="price">1.5 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Pain" data-price="1.5">
+      <img src="images1/pain.jpg" alt="pain">
+      <h3>Pain</h3>
+      <div class="price-card">
+        <span class="price">1.5 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Mini galettte beldi" data-price="3.75">
+      <img src="images1/minin galette beldi.webp" alt="galette">
+      <h3>Mini galettte beldi</h3>
+      <div class="price-card">
+        <span class="price">3.75 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Pain rond" data-price="2">
+      <img src="images1/pain rend.webp" alt="pain">
+      <h3>Pain rond</h3>
+      <div class="price-card">
+        <span class="price">2 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Viennoiseries</h2>
+
+    <div class="product-card fade-in" data-name="Chocolate Croissant" data-price="1.5">
+      <img src="images1/chocolat croissant.webp" alt="croissan">
+      <h3>Chocolate Croissant</h3>
+      <div class="price-card">
+        <span class="price">1.5 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Croissant courbé" data-price="1.5">
+      <img src="images1/croissant courbé.jpg" alt="croissan">
+      <h3>Croissant courbé</h3>
+      <div class="price-card">
+        <span class="price">1.5 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Croissant pur beurre" data-price="3">
+      <img src="images1/Croissant pur beurre.webp" alt="">
+      <h3>Croissant pur beurre</h3>
+      <div class="price-card">
+        <span class="price">3 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Pain suisse aux pépites de chocolat noir" data-price="2.5">
+      <img src="images1/Pain suisse aux pépites de chocolat noir.webp" alt="croissan">
+      <h3>Pain suisse aux pépites de chocolat noir</h3>
+      <div class="price-card">
+        <span class="price">2.5 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Pâtisserie</h2>
+
+    <div class="product-card fade-in" data-name="Briouate amande 500g" data-price="112">
+      <img src="images1/Briouate amande 500g.jpg" alt="Briouate">
+      <h3>Briouate amande 500g</h3>
+      <div class="price-card">
+        <span class="price">112 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Briouates aux amandes 200g" data-price="55.90">
+      <img src="images1/Briouates aux amandes 200g.jpg" alt="Briouate">
+      <h3>Briouates aux amandes 200g</h3>
+      <div class="price-card">
+        <span class="price">55.90 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Plateau Sablé - Grand" data-price="189.90">
+      <img src="images1/Plateau Sablé - Grand.jpg" alt="Sablé">
+      <h3>Plateau Sablé - Grand</h3>
+      <div class="price-card">
+        <span class="price">189.90 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Plateau Prestige - Grand" data-price="330">
+      <img src="images1/Plateau Prestige - Grand.jpg" alt="Prestige">
+      <h3>Plateau Prestige - Grand</h3>
+      <div class="price-card">
+        <span class="price">330 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mini-Supermarket</h3>
+        <p>Les meilleurs produits aux meilleurs prix</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>liens importants</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Promotion.html">Promotion</a></li>
+          <li><a href="#">me contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>me contacter</h4>
+        <p>📍 Maroc</p>
+        <p>📞 +212 601615019</p>
+        <p>📧 mariembouden09@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mini-Supermarket - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

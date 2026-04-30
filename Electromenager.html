@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Supermarket - Electromenager</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo"><img src="images1/logo.jpg" alt="logo"></div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Electroménager</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search" class="search-bar" placeholder="Search products...">
+      <button class="search-button">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-icon" id="favBtn">❤</button>
+      <div class="cart-icon">
+        <button class="header-icon" onclick="scrollToCart()">🛒</button>
+        <span id="cart-badge">0</span>
+      </div>
+      <a href="compte.html" class="header-icon account-link">👤</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Boisson.html">Boissons</a></li>
+      <li><a href="Fruit & légume.html">Fruit & légume</a></li>
+      <li><a href="Boulangerie.html">Boulangerie</a></li>
+      <li><a href="Produits laitiers.html">Produits laitiers</a></li>
+      <li><a href="Electromenager.html" class="active">Electromenager</a></li>
+      <li><a href="Cosmetique.html">Cosmetique</a></li>
+      <li><a href="Promotion.html">Promotion</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <div class="cart-box">
+      <h2>🛒 Mon Panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Articles: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">0.00</span> DH</p>
+      </div>
+      <button id="clear-cart" class="clear-cart-btn">Vider le panier</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Petit electromenager</h2>
+
+    <div class="product-card fade-in" data-name="Coffee machine" data-price="750">
+      <img src="images1/Coffee Machine.jpg" alt="coff">
+      <h3>Coffee machine</h3>
+      <div class="price-card">
+        <span class="price">750 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Toaster" data-price="499">
+      <img src="images1/toaster.jpg" alt="toaster">
+      <h3>Toaster</h3>
+      <div class="price-card">
+        <span class="price">499 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Waffle maker" data-price="455">
+      <img src="images1/waffle maker.jpg" alt="waffle">
+      <h3>Waffle maker</h3>
+      <div class="price-card">
+        <span class="price">455 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="moulinex" data-price="366.90">
+      <img src="images1/moulinex.jpg" alt="moulinex">
+      <h3>moulinex</h3>
+      <div class="price-card">
+        <span class="price">366.90 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Cuisine</h2>
+
+    <div class="product-card fade-in" data-name="Hache viande ME106832 1400W noir - MOULINEX" data-price="799">
+      <img src="images1/Hache viande ME106832 1400W noir - MOULINEX.jpg" alt="hache">
+      <h3>Hache viande ME106832 1400W noir - MOULINEX</h3>
+      <div class="price-card">
+        <span class="price">799 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Barbecue et plancha électrique SGB 106BK - SENCOR" data-price="799">
+      <img src="images1/Barbecue et plancha électrique SGB 106BK - SENCOR.jpg" alt="Barbecue">
+      <h3>Barbecue et plancha électrique SGB 106BK - SENCOR</h3>
+      <div class="price-card">
+        <span class="price">799 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Kitchen machine" data-price="899">
+      <img src="images1/Barbecue et plancha électrique SGB 106BK - SENCOR.webp" alt="Barbecue">
+      <h3>Kitchen machine</h3>
+      <div class="price-card">
+        <span class="price">899 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Friteuse air fryer 5L 1450W - MGS" data-price="480">
+      <img src="images1/Friteuse air fryer 5L 1450W - MGS.jpg" alt="Friteuse">
+      <h3>Friteuse air fryer 5L 1450W - MGS</h3>
+      <div class="price-card">
+        <span class="price">480 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Maison</h2>
+
+    <div class="product-card fade-in" data-name="Air fryer easy fry mega ss 7,5L ey855d10 - TEFAL" data-price="1750">
+      <img src="images1/Air fryer easy fry mega ss 7,5L ey855d10 - TEFAL.jpg" alt="air fryer">
+      <h3>Air fryer easy fry mega ss 7,5L ey855d10 - TEFAL</h3>
+      <div class="price-card">
+        <span class="price">1750 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Dual air fryer 3L + 6L = 9L 2850W AF324AC - DENWA" data-price="1230">
+      <img src="images1/Dual air fryer 3L + 6L = 9L 2850W AF324AC - DENWA.jpg" alt="Dualair">
+      <h3>Dual air fryer 3L + 6L = 9L 2850W AF324AC - DENWA</h3>
+      <div class="price-card">
+        <span class="price">1230 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Aspirateur ASPIRATEUR LX7-2-ECO - AEG" data-price="1559">
+      <img src="images1/Aspirateur ASPIRATEUR LX7-2-ECO - AEG.jpg" alt="Aspirateur">
+      <h3>Aspirateur ASPIRATEUR LX7-2-ECO - AEG</h3>
+      <div class="price-card">
+        <span class="price">1559 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Aspirateur ASPIRATEUR SS SAC CY7089 800W - SEVERIN" data-price="1399">
+      <img src="images1/Aspirateur ASPIRATEUR SS SAC CY7089 800W - SEVERIN.jpg" alt="Aspirateur">
+      <h3>Aspirateur ASPIRATEUR SS SAC CY7089 800W - SEVERIN</h3>
+      <div class="price-card">
+        <span class="price">1399 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mini-Supermarket</h3>
+        <p>Les meilleurs produits aux meilleurs prix</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>liens importants</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Promotion.html">Promotion</a></li>
+          <li><a href="#">me contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>me contacter</h4>
+        <p>📍 Maroc</p>
+        <p>📞 +212 601615019</p>
+        <p>📧 mariembouden09@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mini-Supermarket - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

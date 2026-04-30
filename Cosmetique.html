@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Supermarket - Cosmetique</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="left-group">
+      <button id="modeToggle" class="mode-btn">🌙</button>
+      <a href="index.html" class="logo-wrap">
+        <div class="logo"><img src="images1/logo.jpg" alt="logo"></div>
+        <div>
+          <h1 class="brand-name">Mini-Supermarket</h1>
+          <p class="brand-subtitle">Beauté et hygiène</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search" class="search-bar" placeholder="Search products...">
+      <button class="search-button">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-icon" id="favBtn">❤</button>
+      <div class="cart-icon">
+        <button class="header-icon" onclick="scrollToCart()">🛒</button>
+        <span id="cart-badge">0</span>
+      </div>
+      <a href="compte.html" class="header-icon account-link">👤</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Boisson.html">Boissons</a></li>
+      <li><a href="Fruit & légume.html">Fruit & légume</a></li>
+      <li><a href="Boulangerie.html">Boulangerie</a></li>
+      <li><a href="Produits laitiers.html">Produits laitiers</a></li>
+      <li><a href="Electromenager.html">Electromenager</a></li>
+      <li><a href="Cosmetique.html" class="active">Cosmetique</a></li>
+      <li><a href="Promotion.html">Promotion</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <div class="cart-box">
+      <h2>🛒 Mon Panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Articles: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">0.00</span> DH</p>
+      </div>
+      <button id="clear-cart" class="clear-cart-btn">Vider le panier</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Shampoings</h2>
+
+    <div class="product-card fade-in" data-name="Shampoo baea" data-price="37.50">
+      <img src="images1/shampoo balea men.jpg" alt="shampoo">
+      <h3>Shampoo baea</h3>
+      <div class="price-card">
+        <span class="price">37.50 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Shampoo ultrado" data-price="36">
+      <img src="images1/shampoo ultrado.jpg" alt="ultrado">
+      <h3>Shampoo ultrado</h3>
+      <div class="price-card">
+        <span class="price">36 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="HEAD & SHOULDERS" data-price="37">
+      <img src="images1/Shampoing Menthol 400ml - HEAD & SHOULDERS.webp" alt="head&shoulders">
+      <h3>HEAD & SHOULDERS</h3>
+      <div class="price-card">
+        <span class="price">37 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Les Karités" data-price="59">
+      <img src="images1/Après-shampoing ultra hydratant au beurre de karité 400ml - LES KARITÉS.webp" alt="Après-shampoing">
+      <h3>Les Karités</h3>
+      <div class="price-card">
+        <span class="price">59 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Gel douche</h2>
+
+    <div class="product-card fade-in" data-name="Gel douche dove" data-price="36">
+      <img src="images1/gel douche dove.jpg" alt="gel douche">
+      <h3>Gel douche dove</h3>
+      <div class="price-card">
+        <span class="price">36 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Gel douche Abricot 250ml - NIVEA" data-price="42">
+      <img src="images1/Gel douche Abricot 250ml - NIVEA.webp" alt="NIVEA">
+      <h3>Gel douche Abricot 250ml - NIVEA</h3>
+      <div class="price-card">
+        <span class="price">42 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Baume douche Vanille & Beurre de Jojoba USHUAIA" data-price="39.50">
+      <img src="images1/Baume douche Vanille & Beurre de Jojoba 300 ml - USHUAIA.webp" alt="Baume douche">
+      <h3>Baume douche Vanille & Beurre de Jojoba USHUAIA</h3>
+      <div class="price-card">
+        <span class="price">39.50 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Gel douche 3en1 Sport 250ml - NIVEA MEN" data-price="46">
+      <img src="images1/Gel douche 3en1 Sport 250ml - NIVEA MEN.webp" alt="gel douche">
+      <h3>Gel douche 3en1 Sport 250ml - NIVEA MEN</h3>
+      <div class="price-card">
+        <span class="price">46 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Déodorants</h2>
+
+    <div class="product-card fade-in" data-name="Gillette" data-price="40">
+      <img src="images1/gillette deodorant.jpg" alt="gillette">
+      <h3>Gillette</h3>
+      <div class="price-card">
+        <span class="price">40 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Déodorant NIVEA MEN" data-price="25.50">
+      <img src="images1/Déodorant bille Homme Black & White Original 50ml - NIVEA MEN.webp" alt="NIVEA">
+      <h3>Déodorant NIVEA MEN</h3>
+      <div class="price-card">
+        <span class="price">25.50 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Déodorant L'ORÉAL WOMEN EXPERT" data-price="26">
+      <img src="images1/Déodorant anti-traces 48H Shirt Protect 50ml - L'ORÉAL woMEN EXPERT.jpg" alt="NIVEA">
+      <h3>Déodorant L'ORÉAL WOMEN EXPERT</h3>
+      <div class="price-card">
+        <span class="price">26 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Déodorant spray AXE" data-price="41.75">
+      <img src="images1/Lot de 2 déodorant spray excite 2x150ml - AXE.webp" alt="AXE">
+      <h3>Déodorant spray AXE</h3>
+      <div class="price-card">
+        <span class="price">41.75 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Rasage</h2>
+
+    <div class="product-card fade-in" data-name="lames de rasoir mach3 turbo GILLETTE" data-price="246.75">
+      <img src="images1/8 Recharges de lames de rasoir mach3 turbo - GILLETTE.webp" alt="lames">
+      <h3>lames de rasoir mach3 turbo GILLETTE</h3>
+      <div class="price-card">
+        <span class="price">246.75 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="4 rasoirs parfum-BIC" data-price="53.95">
+      <img src="images1/4 rasoirs parfum lavande et eucalyptus 3 lames Soleil Escape - BIC.webp" alt="rasoir">
+      <h3>4 rasoirs parfum-BIC</h3>
+      <div class="price-card">
+        <span class="price">53.95 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Mousse à raser NIVEA" data-price="61">
+      <img src="images1/Mousse à raser Sensitive 200ml - NIVEA MEN.webp" alt="raser">
+      <h3>Mousse à raser NIVEA</h3>
+      <div class="price-card">
+        <span class="price">61 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" data-name="Baume après-rasage NIVEA" data-price="64.99">
+      <img src="images1/Baume après-rasage Sensitive 100ml - NIVEA MEN.webp" alt="Baume">
+      <h3>Baume après-rasage NIVEA</h3>
+      <div class="price-card">
+        <span class="price">64.99 DH</span>
+        <button class="card-btn">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mini-Supermarket</h3>
+        <p>Les meilleurs produits aux meilleurs prix</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>liens importants</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Promotion.html">Promotion</a></li>
+          <li><a href="#">me contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>me contacter</h4>
+        <p>📍 maroc</p>
+        <p>📞 +212 601615019</p>
+        <p>📧 mariembouden09@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mini-Supermarket - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
